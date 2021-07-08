@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- <h6>Name: {{curr_hospital.name}}</h6>
+<h6>Beds: {{curr_hospital.beds}}</h6>
+<h6>O2 Cyclinders: {{curr_hospital.oxygen_cylinders}}</h6> -->
+<table class="my-3 cool-table">
+    <tr>
+        <th>Name:</th>
+        <td>{{curr_hospital.name}}</td>
+    </tr>
+    <tr>
+        <th>Address:</th>
+        <td>{{curr_hospital.address}}</td>
+    </tr>
+    <tr>
+        <th>Beds:</th>
+        <td>{{curr_hospital.beds}}</td>
+    </tr>
+    <tr>
+        <th>Oxygen Cylinders:</th>
+        <td>{{curr_hospital.oxygen_cylinders}}</td>
+    </tr>
+</table>
+
+  {% if user.is_authenticated and request.user.user_profile.pk != curr_hospital.user.pk %}
+      {% if request.user.user_profile.is_Hospital %}
+      <div style="margin-bottom: 80px">
+        <form class="cool-form" method="POST" action="{% url "basic_app:request_hospital" pk=curr_hospital.pk %}">
+          {%csrf_token%}
+          {{form}}
+          <br><br>
+          <button type="submit">Request</button>
+        </form>
+      </div>
+      {% endif %}
+  {% endif %}
+
+  {% if user.is_authenticated and request.user.user_profile.pk == curr_hospital.user.pk %}
+    <a class='btn btn-warning mr-3' href="{% url 'basic_app:hospital_update' pk=curr_hospital.pk %}">Update Hospital</a>
+  {% endif %}
+  {% if user.is_authenticated and request.user.user_profile.pk == curr_hospital.user.pk %}
+    <a  class='btn btn-warning mr-3' href="{% url 'basic_app:hospital_update_form' %}">Add Daily Cases</a>
+  {% endif %}
+
+
+<div style="margin-bottom: 120px;">
+    <canvas id="myChart" width="400" height="100"></canvas>
+
+</div>
+
+{% endblock %}
+
+{% block script %}
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: [{% for item in curr_hospital.hospital_case.all %}'{{item.date}}',{% endfor %}],
+        datasets: [{
+            label: '# of Votes',
+            data: [{% for item in curr_hospital.hospital_case.all %}{{item.cases}},{% endfor %}],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+    });
+{% endblock %}
