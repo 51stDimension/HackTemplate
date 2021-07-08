@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-      crossorigin="anonymous"
-    />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous"
+  />
     <link rel="stylesheet" href="dash.css" />
+    
     
 </head>
 <body>
     <header>
         <ul id="myTopnav" class="nav"><span id="logo"><a href="#" onclick="myFunction()"><i class="fa fa-ellipsis-h"></i></a></span>
-            <li><a href="#">Get Started</a></li>
+            <li><a href="#">  Get Started</a></li>
             <li><a href="#">Hello, </a></li>
             <li><a href="#">View Dashboard</a></li>
             <li><a href="#">Logout</a></li>
             <li><a href="#">Sign Up</a></li>
             <li><a href="#">Sign In</a></li>
+          </div>  
         </ul>
     </header>    
 
@@ -173,20 +175,19 @@
           </div>
         </main>
       </div>
-      
-      <footer>
-        <div class="box">
-          <ul class="nav">
-            <li class="icon"><a href="#"><i class="fa fa-envelope"></i></a></li>
-            <li class="icon"><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li class="icon"><a href="#"><i class="fab fa-instagram"></i></a></li>
-            <li class="icon"><a href="#"><i class="fab fa-facebook"></i></a></li>
-          </ul>
-        </div>
-      </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script>
+  function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "nav") {
+      x.className += " responsive";
+  } else {
+      x.className = "nav";
+  }
+  }
+</script>
 <script>
     var xyValues = [
       {x:50, y:7},
