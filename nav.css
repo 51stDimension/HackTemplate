@@ -1,0 +1,30 @@
+ul.nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    list-style: none;
+  }
+  ul.nav li {
+    padding: 0.5rem 2rem;
+  }
+  ul.nav a {
+    color: #111;
+  }
+  
+@media screen and (max-width: 600px) {
+    .nav li {display: none;}
+}
+@media screen and (max-width: 600px) {
+    .nav.responsive {position: relative;}
+    .nav.responsive li {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+}

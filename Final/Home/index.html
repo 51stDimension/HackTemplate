@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous"
+  />
+  
+    <link rel="stylesheet" href="style.css" />
+    
+</head>
+
+<body>
+        <!-- <nav>
+            <div class="container">
+                <--logo-->
+            <!-- <a href="home.html" class="logo">Design<span>Home</span></a> -->
+            <!--menu-->
+            <!-- <ul> -->
+                <!-- <li><a href="#home">Home</a></li> -->
+                <!-- <li><a href="#about">About Us</a></li> -->
+                <!-- <li><a href="#services">Services</a></li> -->
+                <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+                <!-- <li><a href="#blog">Blog</a></li> -->
+                <!-- <li><a href="#contact">Contact Us</a></li> -->
+            <!-- </ul> -->
+                <!-- bars -->
+                <!-- <div class="toggle" style="display: inline;"></div> -->
+            <!-- </div> -->
+            
+        <!-- </nav> --> 
+    
+        <header>
+            <ul id="myTopnav" class="nav"><span id="logo"><a href="#" onclick="myFunction()"><i class="fa fa-ellipsis-h"></i></a></span>
+                <li><a href="#">  Get Started</a></li>
+                <li><a href="#">Hello, </a></li>
+                <li><a href="#">View Dashboard</a></li>
+                <li><a href="#">Logout</a></li>
+                <li><a href="#">Sign Up</a></li>
+                <li><a href="#">Sign In</a></li>
+              </div>  
+            </ul>
+        </header>  
+
+
+        <section class="colored-section" id="testimonials">
+
+            <div id="testimonial-carousel" class="carousel slide" data-ride="false">
+              <div class="carousel-inner">
+                <div class="carousel-item active container-fluid">
+                  <h2 class="testimonial-text">I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
+                  <img class="testimonial-image" src="images/dog-img.jpg" alt="dog-profile">
+                  <em>Pebbles, New York</em>
+                </div>
+                <div class="carousel-item container-fluid">
+                  <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
+                  <img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile">
+                  <em>Beverly, Illinois</em>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+              </a>
+              <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+              </a>
+            </div>
+        
+          </section>
+        
+
+    <div style="height: 300px;width: 100%;background-color: white;" class="main"></div>
+    
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <h3>Design<span>Home</span></h3>
+            <p class="footer-links">
+                <a href="#">Home</a> ·
+                <a href="#">About Us</a> ·
+                <a href="#">Services</a> ·
+                <a href="#">Blog</a> ·
+                <a href="#">Contact Us</a>
+            </p>
+            <p class="footer-company-name">webdevtrick &copy; 2019</p>
+        </div>
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>21 Revolution Street</span> Delhi, India</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+1 555 123456</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@company.com">contact@webdevtrick.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+            <span>About the company</span>
+            Web Dev Trick is a blog for web designers, graphic designers, web developers &amp; SEO Learner.
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script src="js/JQuery.js"></script> -->
+    <script >
+        $(document).ready(function(){
+            $('.toggle').click(function(){
+                $('.toggle').toggleClass('active')
+                $('nav').toggleClass('active')
+            })
+        })
+    </script>
+<script>
+    function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav";
+    }
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
