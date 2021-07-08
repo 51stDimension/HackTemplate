@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+    <header>
+        <ul id="myTopnav" class="nav"><span id="logo"><a href="#" onclick="myFunction()"><i class="fa fa-ellipsis-h"></i></a></span>
+            <li><a href="#">Get Started</a></li>
+            <li><a href="#">Hello, </a></li>
+            <li><a href="#">View Dashboard</a></li>
+            <li><a href="#">Logout</a></li>
+            <li><a href="#">Sign Up</a></li>
+            <li><a href="#">Sign In</a></li>
+        </ul>
+    </header>
+
+      <section id="banner">
+        <div class="box">
+          <h1>DMart Crowd Control Portal</h1>
+          <p>Buy Smart, Save Big</p>
+          <button>Visit Official Website</button>
+        </div>
+      </section>
+
+      <div id="features">
+                <div class="box">
+                <h2>Features</h2>
+                <div class="grid">
+                    <div class="bg-shd" id="feat"><i class="far fa-comment-alt"></i>
+                    <h3>Feature</h3>
+                    <p>Some short descriptional text about one amazing feature</p><a href="#">More ></a>
+                    </div>
+                    <div class="bg-shd" id="feat"><i class="far fa-laugh"></i>
+                    <h3>Another feature</h3>
+                    <p>Some short descriptional text about one amazing feature</p><a href="#">More ></a>
+                    </div>
+                    <div class="bg-shd" id="feat"><i class="far fa-star"></i>
+                    <h3>One more feature</h3>
+                    <p>Some short descriptional text about one amazing feature</p><a href="#">More ></a>
+                    </div>
+                </div>
+                </div>
+        </div>
+
+        <section class="bg-shd" id="contacts">
+            <div class="box">
+            <h2>Subscribe</h2>
+            <form>
+                <label for="user">
+                <input id="user" type="text" placeholder="Name"/>
+                </label>
+                <label for="email">
+                <input id="email" type="email" placeholder="Email"/>
+                </label>
+                <button class="sm" type="submit">Submit</button>
+            </form>
+            </div>
+        </section>
+
+
+      <footer>
+        <div class="box">
+          <ul class="nav">
+            <li class="icon"><a href="#"><i class="fa fa-envelope"></i></a></li>
+            <li class="icon"><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="icon"><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li class="icon"><a href="#"><i class="fab fa-facebook"></i></a></li>
+          </ul>
+        </div>
+      </footer>
+<script>
+    function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav";
+    }
+    }
+</script>
+</body>
+</html>
